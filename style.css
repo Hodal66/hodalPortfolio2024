@@ -11,7 +11,15 @@
     --whiteColor:#eee;
     --blackColor:#111;
     --strockColor:#0F3745;
+    --strockColor2: #235b72;
     --smallRound:6px;
+    --smallPadding: 16px;
+        --mediumPadding: 20px;
+        --largePadding: 24px;
+        --xLargePadding: 32px;
+        --smallGap: 16px;
+        --mediumGap: 20px;
+        --largeGap: 32px;
     --radialGradient: radial-gradient(circle, #024A79, #1A425E);
     --linearGradient1:linear-gradient(to bottom right, rgb(4, 33, 44), rgb(14, 129, 133));
 }
@@ -21,6 +29,110 @@ body{
     color:var(--whiteColor);
 }
 
+/* =============================
+ GENERAL CSS STYLE
+ ================================= */
+
+.inside-padding-1 {
+    padding: 24px;
+}
+
+.inside-padding-2 {
+    padding: 32px;
+}
+
+.grid-template-1 {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--smallGap);
+}
+
+.grid-template-2 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: var(--smallGap);
+}
+
+.grid-template-3 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: var(--smallGap);
+}
+
+.grid-template-4 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: var(--smallGap);
+}
+
+.flex-row-center-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: var(--smallGap);
+}
+
+.flex-column-center-center {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column-start {
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+    gap: 20px;
+}
+
+
+.last-container-border {
+    border: 2px solid var(--strockColor);
+}
+
+.mainHomeSection,
+.mainProjectsSection,
+.mainParternesSwction,
+.mainEducationSection,
+.mainServicesSection,
+.mainStacksSection,
+.mainBlogSection,
+.mainTestmonialSection,
+.mainGallelrySection,
+.mainContactUsSection {
+    background-color: var(--primaryColor);
+    padding: var(--xLargePadding);
+    border: 2px solid var(--strockColor);
+}
+
+.card1,
+.card2,
+.card3,
+.card4,
+.card5,
+.card6,
+.card7 {
+    padding: var(--smallPadding);
+    background: var(--linearGradient1);
+}
+
+.box-div-content {
+    background: var(--radialGradient);
+    border: 2px solid var(--strockColor);
+    padding: var(--smallPadding);
+}
+
+.content-style {
+    background: var(--radialGradient);
+    border: 1px solid var(--strockColor2);
+    padding: var(--smallPadding);
+}
+
+/*====================
+Aside
+ ====================================== */
 aside{
     background: var(--radialGradient);
     width: 150px;
@@ -36,7 +148,7 @@ aside{
 aside .asideTopContentContainer{
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: var(--smallGap);
 
 }
 aside .asideTopContentContainer .dates{
@@ -74,7 +186,7 @@ aside .asideBottomContentContaier ul{
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    gap: 32px;
+    gap: var(--smallGap);
 }
 
 svg:hover{
@@ -86,8 +198,126 @@ svg:hover{
  Main Section
  ====================================== */
 
- main{
+#mainContentContainer {
     margin-left: 150px;
     padding: 24px;
     background-color: var(--blackColor);
- }
+    display: flex;
+        flex-direction: column;
+        gap: var(--xLargePadding);
+    }
+    
+    /*====================
+         mainHomeSection Section
+         ====================================== */
+    .mainHomeSection {
+        display: grid;
+        grid-template-columns: 3fr 9fr;
+        gap: var(--smallGap);
+        height: 490px;
+    }
+    
+    .mainHomeSection img {
+        width: 320px;
+        height: 420px;
+        border-radius: var(--smallRound);
+    }
+    
+    #homeContentContainer {
+        /* background-color: red !important; */
+        /* border: 20px dashed salmon ; */
+        height: 420px;
+        display: flex;
+        flex-direction: column;
+        gap: var(--smallGap);
+    }
+    
+    .homeBottomContainContainer {
+        display: grid;
+        grid-template-columns: 7fr 5fr;
+        gap: var(--smallGap);
+}
+.homeTopContentContainer {
+    display: grid;
+    grid-template-columns: 5fr 4fr 3fr;
+    gap: var(--smallGap);
+}
+
+.circle_frelencer,
+.c3,
+.c2,
+.c1 {
+    border-radius: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    animation: 0.5s infinite var(--strockColor2);
+
+}
+
+.circle_frelencer {
+    width: 20px;
+    height: 20px;
+    background-color: var(--strockColor2)
+}
+
+.c3 {
+    width: 10px;
+    height: 10px;
+    background-color: var(--whiteColor)
+}
+
+.c2 {
+    width: 5px;
+    height: 5px;
+    background-color: var(--strockColor2)
+}
+
+.c1 {
+    width: 2px;
+    height: 2px;
+    background-color: orange;
+}
+
+
+.homeBottomContainContainer{
+    /* border: 20px dashed gold; */
+    height: 280px;
+}
+
+.helloAreaBottonLeft,.helloAreaBottomRight{
+    /* border: 20px dashed rgb(55, 235, 79);  */
+    height: 315px;
+}
+.helloImageSignContainer{
+    /* background-color: aqua; */
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.helloImageSignContainer img{
+    width: 80px;
+    height: 50px;
+}
+
+.helloAreaBottomRightImageContainer{
+    display: flex;
+    justify-content: end;
+    align-items: end;
+}
+.helloAreaBottomRightImageContainer img{
+height: 228px;
+width: 250px;
+}
+.helloAreaBottomRight{
+    background: var(--radialGradient);
+    border: 1px solid var(--strockColor2);
+}
+.helloAreaBottomRightTopContent{
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: var(--smallGap);
+    margin: var(--smallPadding);
+}
